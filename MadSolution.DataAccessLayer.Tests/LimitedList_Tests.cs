@@ -5,14 +5,14 @@ using NUnit.Framework;
 
 namespace MadSolution.DataAccessLayer.Tests
 {
-	public class LimitedList_Tests
+    public class LimitedList_Tests
     {
         [Test]
         public void WhenAddWithMaxCountReached_ThenPutObjectIntoWaitingRoom()
         {
             LimitedList<int> testCase = new(100);
             List<int> tc2 = testCase;
-            testCase.Clear();
+            //testCase.Clear();
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace MadSolution.DataAccessLayer.Tests
         [Test]
         public void MockListUse_tests()
         {
-            var list = new LimitedList<string>(2, name : "a"); ;
+            var list = new LimitedList<string>(2, name: "a"); ;
             var list_2 = new LimitedList<string>(2, name: "b");
             list.OnMaxCountReached += OnMaxCountREachedEventHandler;
             list_2.OnMaxCountReached += OnMaxCountREachedEventHandler;
@@ -39,7 +39,7 @@ namespace MadSolution.DataAccessLayer.Tests
         private void OnMaxCountREachedEventHandler(object o, LimitedListEventArgs e)
         {
             Console.WriteLine($"Message: {e.Message}");
-			if (o is LimitedList<string>) Console.WriteLine($"Name: {((LimitedList<string>)o).Name}");
+            if (o is LimitedList<string>) Console.WriteLine($"Name: {((LimitedList<string>)o).Name}");
         }
 
         private void EngineImiting(LimitedList<string> fakeList)
