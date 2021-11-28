@@ -7,5 +7,7 @@
         public static readonly string ItemWasTakenFromWaitingRoom = "Items from waiting room was taken";
         public static readonly string ListIsEmpty = "List has no item";
         public static readonly string InvalidRoomType = "Waiting Room type is invalid";
+        public static readonly string WaitingRoomIsEmpty = "Waiting Room is empty";
+        public static readonly string MaxCountSmallerThenOne = "Max Count Smaller Then One";
     }
 }

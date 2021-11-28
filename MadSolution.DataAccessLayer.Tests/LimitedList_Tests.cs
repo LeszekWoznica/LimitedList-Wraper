@@ -28,7 +28,7 @@ namespace MadSolution.DataAccessLayer.Tests
         [Test]
         public void MockListUse_tests()
         {
-            var list = new LimitedList<string>(2, name: "a"); ;
+            var list = new LimitedList<string>(2, name: "a");
             var list_2 = new LimitedList<string>(2, name: "b");
             list.OnMaxCountReached += OnMaxCountREachedEventHandler;
             list_2.OnMaxCountReached += OnMaxCountREachedEventHandler;
